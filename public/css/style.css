@@ -1,0 +1,338 @@
+/* Esta clase se emplea para darle el estilo a la pagina web y todos sus elementos*/
+
+/* Importación de la fuente "Barrio" desde Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
+/* Aplicar la fuente "Barrio" y establecer color de fondo rojo*/
+body{
+    font-family: "Barrio", serif;
+    background-color: #B82132;
+}
+
+/*
+SELECTORES
+
+existen tres tipos de selectores para la referenciación
+en css al trabajar con los elementos de html
+
+El primero es de tipo, se refiere a llamar un elemento
+con su tipo de etiqueta, por ejemplo 
+para llamar el titulo principal usamos h1 asi:
+
+h1{   
+    color: darkorange;
+}
+
+El segundo es de clase, se refiere a llamar un elemento
+con su atributo clase, para esto debemos agregar el 
+atributo clase en la etiqueta del elemento, en este 
+ caso es el titulo principal, por lo que en h1 le agregamos 
+ el atributo class al cual le asignamos el valor de 
+ titulo-juego para posteriormente llamarlo en css asi:
+
+.titulo{
+    color: darkorange
+}
+
+El tercero es de id, se refiere a llamar un elemento con
+su atributo id, para esto debemos ir a la etiqueta h1 
+y agregarle el atributo id al cual le asignamos el valor 
+de titulo-juego, para posteriormente llamarlo en css asi:
+
+*/
+
+/*Establecer color y tamaño de fuente para el título del juego*/
+#titulo-juego{
+    color: white;
+    font-size: 48px;
+}
+
+/*
+las propiedades son las caracteristicas que queremos
+modificar y los valores son el factor que se le asigna
+en este caso uno de los ejemplos es para el titulo 
+en su propiedad color se le asigna el valor darkorange
+
+DISPLAY
+
+display es una propiedad que nos permite modificar la 
+forma en que se muestra un elemento, por ejemplo
+si queremos que un elemento se muestre en bloque
+usamos display:block, si queremos que se muestre
+en linea usamos display:inline, si queremos que
+se muestre en linea pero que se pueda modificar
+su ancho y alto usamos display:inline-block, si
+queremos que no se muestre usamos display:none
+y si queremos que se muestre en forma de tabla
+usamos display:table
+
+label{ los label son elementos de tipo inline
+    background-color: crimson;
+    width: 310px;
+    height: 50px;
+}
+
+input{ los input son elementos de tipo inline-block
+    background-color: orange;
+    width: 310px;
+    height: 50px;
+}
+
+button{ los button son elementos de tipo inline-block
+    background-color: violet;
+    width: 310px;
+    height: 50px;
+}
+
+FLEXBOX
+
+flexbox es una propiedad que nos permite modificar
+la forma en que se distribuyen los elementos en un
+contenedor, por ejemplo si queremos que los elementos
+se distribuyan en una sola fila usamos flex-direction:row
+si queremos que se distribuyan en una sola columna
+usamos flex-direction:column, si queremos que se distribuyan
+en una fila pero que se alineen al centro usamos
+justify-content:center, si queremos que se alineen
+al centro de la columna usamos align-items:center
+y si queremos que se distribuyan en una sola fila
+pero que se alineen al centro de la columna usamos
+justify-content:center y align-items:center
+Flexbox toma los elementos de html como si fueran cajas
+y los distribuye en el contenedor de acuerdo a las
+propiedades que le asignemos, en este caso el contenedor
+es la etiqueta section y los elementos son todos los
+elementos que estan dentro de la etiqueta section
+
+*/
+
+/* centrando el contenido vertical y horizontalmente*/
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+
+MODELO DE CAJA
+
+el modelo de caja es una propiedad que nos permite
+modificar la forma en que se distribuyen los elementos
+en un contenedor. content, padding, border y margin
+son las propiedades que se pueden modificar en el
+modelo de caja, content es el contenido del elemento
+padding es el espacio entre el contenido y el borde
+border es el borde del elemento y margin es el espacio
+entre el borde del elemento y el contenedor.
+
+*/
+
+/* Estilos para las tarjetas de mascota*/
+.tarjeta-mascota{
+    color: white;
+    width: 220px;
+    height: 280px;
+    background-color:#D2665A;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Ajustar tamaño de las imágenes dentro de las tarjetas de */
+.tarjeta-mascota img{
+    width: 200px;
+    height: 200px;
+}
+
+/*Estilo para las secciones de tarjetas*/
+.tarjetas, .tarjetas-ataques{
+    display: flex;
+    gap: 10px;
+}
+
+/*Estilo del botón de selección de mascota*/
+#boton-mascota{
+    width: 120px;
+    height: 40px;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-family: "Barrio", serif;
+    background-color: #F2B28C;
+    font-size: 15px;
+    user-select: none;
+}
+
+/*Estilo para los subtítulos*/
+.subtitulo{
+    color: white;
+    font-size: 28px;
+}
+
+/*Flexbox para centrar contenido vertical y horizontalmente*/
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Estilos para los botones de ataque*/
+.boton-de-ataque{
+    width: 80px;
+    height: 50px;
+    padding:10px;
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: "Barrio", serif;
+    background-color: #F2B28C;
+    font-size: 20px;
+    user-select: none;
+}
+
+/*Estilos para la sección de mensajes*/
+#mensajes{
+    width: 280px;
+    background: #F2B28C;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Estilos para el botón de reinicio*/
+#boton-reiniciar{
+    border: none;
+    font-family: "Barrio", serif;
+    background-color: #F2B28C;
+    font-size: 30px;
+    margin-top: 10px;
+    user-select: none;
+}
+
+/*
+
+GRID
+
+grid es una propiedad que nos permite modificar
+la forma en que se distribuyen los elementos en un
+contenedor, por ejemplo si queremos que los elementos
+se distribuyan en una sola fila usamos grid-template-columns
+y si queremos que se distribuyan en una sola columna
+usamos grid-template-rows, si queremos que se distribuyan
+en una sola fila pero que se alineen al centro usamos
+justify-content:center, si queremos que se alineen
+al centro de la columna usamos align-items:center
+y si queremos que se distribuyan en una sola fila
+pero que se alineen al centro de la columna usamos
+justify-content:center y align-items:center.
+
+Grid toma los elementos de html como si fueran cajas
+y los distribuye en el contenedor de acuerdo a las
+propiedades que le asignemos, en este caso el contenedor
+es la etiqueta section y los elementos son todos los
+elementos que estan dentro de la etiqueta section,
+es muy similar a flexbox pero con algunas diferencias
+como que flexbox es unidimensional y grid es bidimensional
+
+*/
+
+/*Estilo para la sección de ataques del juego*/
+.ataques-juego{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    color: white;
+    background-color: rgb(138, 39, 39);
+    margin-top: 20px;
+}
+
+/*Flexbox para centrar contenido verticalmente*/
+.ataques-jugador, .ataques-enemigo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+/*Ajustar la flexbox para dispositivos pequeños*/
+@media (max-width: 560px){
+    .tarjetas, .tarjetas-ataques{
+        flex-direction: column;
+    }
+
+}
+
+/*
+
+PSEUDOCLASES
+
+las pseudoclases son una propiedad que nos permite
+modificar la forma en que se ve un elemento cuando
+se encuentra en un estado especifico, por ejemplo
+cuando el mouse esta sobre el elemento, cuando el
+elemento esta seleccionado, cuando el elemento esta
+desactivado, cuando el elemento esta activado, 
+entre muchas otras, en este caso se usa la pseudoclase
+:checked para modificar el color de fondo de un elemento
+cuando esta seleccionado. 
+
+al lado del input se encuentra el label, el cual
+es un elemento que se usa para referenciar al input
+y modificar su estilo, se le llama hermano adyacente
+y se usa el simbolo + para referenciarlo.
+
+*/
+
+/*Ocultar elementos de entrada*/
+input{
+    display: none;
+}
+
+/*Cambiar color de fondo cuando se selecciona una entrada*/
+input:checked + label{
+    background-color: #1d0ea3;
+}
+
+/*Flexbox para centrar contenido vertical y horizontalmente*/
+#ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+/*
+
+Aqui usamos # para la sección de id "ver-mapa" y luego button
+para indicarle que todos los botones se vean afectados
+por la siguiente sección
+*/
+
+/*Estilos para los botones dentro de la sección de mapa*/
+#ver-mapa button{
+    width: 80px;
+    height: 40px;
+    margin: 2px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-family: "Barrio", serif;
+    background-color: #F2B28C;
+    font-size: 15px;
+
+}
+
+/*Ajustar la flexbox para dispositivos muy pequeños*/
+@media (max-width: 300px){
+    #ver-mapa div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}

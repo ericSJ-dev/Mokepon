@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Establecer la codificación de caracteres y viewport para dispositivos móviles -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOKEPÓN</title>
+
+    <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section id="seleccionar-mascota">
+        <!-- Título del juego -->
+        <h1 id="titulo-juego" class="titulo">Mokepón</h1>
+        <!-- Subtítulo para la selección de mascotas -->
+        <h2 class="subtitulo">Elige tu mascota:</h2>
+
+        <!-- Contenedor para las tarjetas de selección de mascotas -->
+        <div id="contenedor-tarjetas" class="tarjetas">
+        </div>
+
+        <!-- Botón para seleccionar la mascota -->
+        <button id="boton-mascota">Seleccionar</button>
+    </section>
+
+    <section id="ver-mapa">
+        <!-- Subtítulo para la sección de mapa -->
+        <h2 class="subtitulo">Recorre el mapa con tu mokepon</h2>
+        <!-- Canvas para dibujar el mapa -->
+        <canvas id="mapa"></canvas>
+        <!-- Botones para mover el mokepon en el mapa -->
+        <button ontouchstart="moverArriba()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+        <div>
+            <button ontouchstart="moverIzquierda()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()" onmouseout="detenerMovimiento()">Izquierda</button>
+            <button ontouchstart="moverAbajo()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverAbajo()" onmouseout="detenerMovimiento()">Abajo</button>
+            <button ontouchstart="moverDerecha()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverDerecha()" onmouseout="detenerMovimiento()">Derecha</button>
+        </div>
+    </section>
+
+    <section id="seleccionar-ataque">
+        <!-- Título del juego -->
+        <h1 id="titulo-juego" class="titulo">Mokepón</h1>
+        <!-- Subtítulo para la selección de ataques -->
+        <h2 class="subtitulo">Elige tu ataque:</h2>
+
+        <!-- Contenedor para las tarjetas de selección de ataques -->
+        <div id="contenedor-ataques" class="tarjetas-ataques"></div>
+
+        <div id="mensajes">
+            <!-- Mensaje de resultado -->
+            <div id="resultado">¡Suerte! ✨🎉</div>
+            <!-- Sección para reiniciar el juego -->
+            <section id="reiniciar">
+                <button id="boton-reiniciar">Reiniciar</button>
+            </section>
+        </div>
+
+        <!-- Sección de ataques del juego -->
+        <div class="ataques-juego">
+            <div class="ataques-jugador">
+                <!-- Contador de victorias del jugador -->
+                <p id="victorias-jugador">0</p>
+                <!-- Nombre de la mascota del jugador -->
+                <p id="mascota-jugador"></p>
+                <!-- Contenedor para los ataques del jugador -->
+                <div id="ataques-del-jugador"></div>
+            </div>
+            <div class="ataques-enemigo">
+                <!-- Contador de victorias del enemigo -->
+                <p id="victorias-enemigo">0</p>
+                <!-- Nombre de la mascota del enemigo -->
+                <p id="mascota-enemigo"></p>
+                <!-- Contenedor para los ataques del enemigo -->
+                <div id="ataques-del-enemigo"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="./js/mokepón.js"></script>
+</body>
+
+</html>
